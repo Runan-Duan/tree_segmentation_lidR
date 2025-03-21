@@ -1,0 +1,407 @@
+<VRTDataset rasterXSize="264" rasterYSize="243">
+  <GeoTransform>  4.7662400000000000e+05,  1.0000000000000000e+00,  0.0000000000000000e+00,  5.4292130000000000e+06,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Float32" band="1">
+    <NoDataValue>-999999</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476624_5428970_1_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="11" RasterYSize="30" DataType="Float32" BlockXSize="11" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="11" ySize="30" />
+      <DstRect xOff="0" yOff="213" xSize="11" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476624_5429000_2_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16" RasterYSize="40" DataType="Float32" BlockXSize="16" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="16" ySize="40" />
+      <DstRect xOff="0" yOff="173" xSize="16" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476624_5429040_3_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16" RasterYSize="40" DataType="Float32" BlockXSize="16" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="16" ySize="40" />
+      <DstRect xOff="0" yOff="133" xSize="16" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476624_5429080_4_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16" RasterYSize="40" DataType="Float32" BlockXSize="16" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="16" ySize="40" />
+      <DstRect xOff="0" yOff="93" xSize="16" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476624_5429120_5_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="16" RasterYSize="38" DataType="Float32" BlockXSize="16" BlockYSize="38" />
+      <SrcRect xOff="0" yOff="0" xSize="16" ySize="38" />
+      <DstRect xOff="0" yOff="55" xSize="16" ySize="38" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476640_5428970_6_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="16" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476640_5429000_7_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="16" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476640_5429040_8_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="16" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476640_5429080_9_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="16" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476640_5429120_10_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="38" DataType="Float32" BlockXSize="40" BlockYSize="38" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="38" />
+      <DstRect xOff="16" yOff="55" xSize="40" ySize="38" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476680_5428970_11_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="56" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476680_5429000_12_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="56" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476680_5429040_13_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="56" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476680_5429080_14_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="56" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476680_5429120_15_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="38" DataType="Float32" BlockXSize="40" BlockYSize="38" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="38" />
+      <DstRect xOff="56" yOff="55" xSize="40" ySize="38" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476720_5428970_16_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="96" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476720_5429000_17_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="96" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476720_5429040_18_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="96" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476720_5429080_19_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="96" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476720_5429120_20_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="96" yOff="53" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476724_5429160_21_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="36" RasterYSize="40" DataType="Float32" BlockXSize="36" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="36" ySize="40" />
+      <DstRect xOff="100" yOff="13" xSize="36" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476724_5429200_22_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="36" RasterYSize="13" DataType="Float32" BlockXSize="36" BlockYSize="13" />
+      <SrcRect xOff="0" yOff="0" xSize="36" ySize="13" />
+      <DstRect xOff="100" yOff="0" xSize="36" ySize="13" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5428970_23_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="136" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429000_24_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="136" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429040_25_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="136" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429080_26_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="136" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429120_27_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="136" yOff="53" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429160_28_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="136" yOff="13" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476760_5429200_29_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="13" DataType="Float32" BlockXSize="40" BlockYSize="13" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="13" />
+      <DstRect xOff="136" yOff="0" xSize="40" ySize="13" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5428970_30_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="176" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429000_31_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="176" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429040_32_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="176" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429080_33_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="176" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429120_34_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="176" yOff="53" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429160_35_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="176" yOff="13" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476800_5429200_36_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="13" DataType="Float32" BlockXSize="40" BlockYSize="13" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="13" />
+      <DstRect xOff="176" yOff="0" xSize="40" ySize="13" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5428970_37_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="30" DataType="Float32" BlockXSize="40" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="30" />
+      <DstRect xOff="216" yOff="213" xSize="40" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429000_38_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="216" yOff="173" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429040_39_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="216" yOff="133" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429080_40_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="216" yOff="93" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429120_41_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="216" yOff="53" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429160_42_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="40" RasterYSize="40" DataType="Float32" BlockXSize="40" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="40" ySize="40" />
+      <DstRect xOff="216" yOff="13" xSize="40" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476840_5429200_43_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="39" RasterYSize="13" DataType="Float32" BlockXSize="39" BlockYSize="13" />
+      <SrcRect xOff="0" yOff="0" xSize="39" ySize="13" />
+      <DstRect xOff="216" yOff="0" xSize="39" ySize="13" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5428970_44_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="30" DataType="Float32" BlockXSize="8" BlockYSize="30" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="30" />
+      <DstRect xOff="256" yOff="213" xSize="8" ySize="30" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429000_45_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="40" DataType="Float32" BlockXSize="8" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="40" />
+      <DstRect xOff="256" yOff="173" xSize="8" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429040_46_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="40" DataType="Float32" BlockXSize="8" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="40" />
+      <DstRect xOff="256" yOff="133" xSize="8" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429080_47_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="40" DataType="Float32" BlockXSize="8" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="40" />
+      <DstRect xOff="256" yOff="93" xSize="8" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429120_48_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="40" DataType="Float32" BlockXSize="8" BlockYSize="40" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="40" />
+      <DstRect xOff="256" yOff="53" xSize="8" ySize="40" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429160_49_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="35" DataType="Float32" BlockXSize="8" BlockYSize="35" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="35" />
+      <DstRect xOff="256" yOff="18" xSize="8" ySize="35" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">476880_5429203_50_chm.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="8" RasterYSize="4" DataType="Float32" BlockXSize="8" BlockYSize="4" />
+      <SrcRect xOff="0" yOff="0" xSize="8" ySize="4" />
+      <DstRect xOff="256" yOff="6" xSize="8" ySize="4" />
+      <NODATA>-999999</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

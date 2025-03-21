@@ -7,7 +7,7 @@ date: "2025-03-18"
 ## Setup
 ```{r setup, include=FALSE}
 # Clear environment
-#rm(list = ls(globalenv()))
+rm(list = ls(globalenv()))
 
 # Load packages
 library(lidR)
@@ -29,11 +29,13 @@ set_lidr_threads(threads)
 ### Create LAScatalog object
 ```{r}
 ctg <- readLAScatalog("tiles_data/bretten01_leafon/las_output")
+```
+
+```{r}
 # For LAScatalog object
 crs(ctg) <- 25832
 st_crs(ctg) <- 25832
 st_bbox(ctg)
-ctg
 ```
 
 ```{r}
@@ -70,7 +72,7 @@ lidR:::catalog_laxindex(ctg_filtered)
 ### Specify chunk size and buffer
 ```{r}
 opt_chunk_size(ctg_filtered) <- 40
-opt_chunk_buffer(ctg_filtered) <- 5
+opt_chunk_buffer(ctg_filtered) <- 10
 
 # Visualize and summarize the catalog chunks
 plot(ctg_filtered, chunk = TRUE)
@@ -99,16 +101,16 @@ classified_ctg <- classify_ground(ctg_filtered, pmf(ws = 5, th = 3))
 ## DTM 
 ```{r}
 # Set the output directory and Generate output filenames using a template
-output_dir <- "tiles_data/bretten01_leafon/dtm"
+output_dir <- "tiles_data/bretten01_leafon/dtm_0.1"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 opt_output_files(ctg_filtered) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_dtm")
 
-dtm <- rasterize_terrain(ctg_filtered, 1, knnidw())
+dtm <- rasterize_terrain(ctg_filtered, 0.1, knnidw())
 ```
 
 ## Height normalization
 ```{r}
-output_dir <- "tiles_data/bretten01_leafon/norm"
+output_dir <- "tiles_data/bretten01_leafon/norm_0.1"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 opt_output_files(ctg_filtered) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_norm")
 
@@ -118,7 +120,7 @@ ctg_norm <- normalize_height(ctg_filtered, dtm)
 
 ## Import files from LAScatalog
 ```{r}
-norm_input_dir <- "tiles_data/bretten01_leafon/norm"
+norm_input_dir <- "tiles_data/bretten01_leafon/norm_0.1"
 ctg_norm <- readLAScatalog(norm_input_dir)
 plot(ctg_norm, chunk=TRUE, map=TRUE)
 ```
@@ -132,7 +134,8 @@ f <- function(x) {
   y[x < 5] <- 1
   y[x >= 5 & x <= 10] <- 2
   y[x >= 10 & x <= 20] <- 3
-  y[x > 20] <- 4  
+  y[x >= 20 & x <=50 ] <- 4
+  y[x > 50] <- 5
   return(y)
 }
 
@@ -157,7 +160,6 @@ chm_pitfree_05_2 <- rasterize_canopy(ctg_norm, 0.5, pitfree(subcircle = 0.2), pk
 
 ```{r}
 # Post-processing median filter
-kernel <- matrix(1,3,3)
 chm_p2r_05_smoothed <- terra::focal(chm_p2r_05, w = kernel, fun = median, na.rm = TRUE)
 chm_p2r_1_smoothed <- terra::focal(chm_p2r_1, w = kernel, fun = median, na.rm = TRUE)
 ```
@@ -174,27 +176,37 @@ ttops_chm_p2r_1_smoothed <- locate_trees(chm_p2r_1_smoothed, lmf(f))
 
 ### CHM based Segmentation
 ```{r}
-output_dir <- "tiles_data/bretten01_leafon/segmented"
+output_dir <- "tiles_data/bretten01_leafon/chm_1"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-opt_output_files(ctg_norm) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_seg")
+opt_output_files(ctg_norm) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_chm")
 
-algo <- dalponte2016(chm_p2r_05_smoothed, ttops_chm_p2r_05_smoothed)
-tree_segs <- segment_trees(ctg_norm, algo) # segment point cloud
-```
-
-
-## Individual Tree Segmentation
-```{r}
-opt_output_files(ctg_norm) <- paste0(tempdir(), "/chm_{*}")
-chm <- rasterize_canopy(ctg_norm, 1, p2r(0.15))
-plot(chm, col = height.colors(50))
+kernel <- matrix(1,3,3)
+chm_p2r_1 <- rasterize_canopy(ctg_norm, 1, p2r(subcircle = 0.2), pkg = "terra")
 ```
 
 ```{r}
-opt_output_files(ctg_norm) <- ""
-ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
+col <- height.colors(50)
+plot(chm_p2r_1, main = "CHM P2R 1", col = col)
 ```
 
+
+```{r}
+chm_p2r_1_smoothed <- terra::focal(chm_p2r_1, w = kernel, fun = median, na.rm = TRUE)
+ttops_chm_p2r_1_smoothed <- locate_trees(chm_p2r_1_smoothed, lmf(f), uniqueness = "bitmerge")
+```
+
+```{r}
+plot(chm_p2r_1_smoothed, main = "CHM P2R 1 smoothed", col = col) 
+plot(sf::st_geometry(ttops_chm_p2r_1_smoothed), add = T, pch =3)
+```
+
+```{r}
+output_dir <- "tiles_data/bretten01_leafon/seg_1"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+opt_output_files(ctg) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_seg")
+algo <- dalponte2016(chm_p2r_1_smoothed, ttops_chm_p2r_1_smoothed)
+tree_segs <- segment_trees(ctg, algo) # segment point cloud
+```
 
 
 
@@ -206,11 +218,7 @@ plot(dtm, main = "Digital Terrain Model (DTM)", xlab = "Easting", ylab = "Northi
 
 
 ```{r eval=FALSE, include=FALSE}
-# Filter tree points where return number is 1 (if necessary)
-#opt_filter(ctg_norm) <- "-keep_first"
-
 hmean <- pixel_metrics(ctg_norm, ~mean(Z), 1)
-
 plot(hmean, col = height.colors(25))
 ```
 
@@ -238,6 +246,7 @@ plot(ctg, add = T)
 
 
 ```{r}
+
 sum(ttops$treeID == 1)
 #> [1] 9
 plot(ttops["treeID"], cex = 0.3, pch = 19, nbreaks = 50)
@@ -245,4 +254,64 @@ plot(ttops["treeID"], cex = 0.3, pch = 19, nbreaks = 50)
 ttops$treeID <- 1:nrow(ttops)
 ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
 plot(ttops["treeID"], cex = 0.01, pch = 19)
+
+
+plot(chm, col = height.colors(50))
 ```
+
+```{r}
+ttops_chm_p2r_1_smoothed
+plot(ttops_chm_p2r_1_smoothed["Z"], cex = 0.001, pch = 19, pal = height.colors, nbreaks = 30)
+```
+
+```{r}
+seg_input_dir <- "tiles_data/bretten01_leafon/seg_1/476624.8_5429057_4_seg.las"
+seg <- readLAS(seg_input_dir)
+plot(seg, bg = "white", size = 4, color = "treeID")
+```
+
+
+## Import all files for visualization
+
+```{r}
+library(lidR)
+
+# 1. Read the directory containing segmented LAS files
+seg_input_dir <- "tiles_data/bretten01_leafon/seg_1/"
+
+# 2. Get paths to all LAS files
+seg_files <- list.files(seg_input_dir, pattern = "\\.las$", full.names = TRUE)
+if (length(seg_files) == 0) {
+  stop("No LAS files found. Please check the directory path.")
+}
+
+# 3. Read all files and check for empty data or missing 'treeID'
+seg_list <- lapply(seg_files, function(file) {
+  las <- readLAS(file)
+  if (is.empty(las)) {
+    warning("File ", file, " is empty and will be skipped.")
+    return(NULL)
+  }
+  if (!"treeID" %in% names(las@data)) {
+    warning("File ", file, " is missing the 'treeID' field and will be skipped.")
+    return(NULL)
+  }
+  return(las)
+})
+
+# Remove NULL elements from the list
+seg_list <- Filter(Negate(is.null), seg_list)
+
+# 4. Merge all non-empty LAS objects
+if (length(seg_list) == 0) {
+  stop("No valid LAS files to merge.")
+}
+seg_combined <- do.call(rbind, seg_list)
+
+# 5. Visualize the merged result
+plot(seg_combined, bg = "white", size = 4, color = "treeID")
+```
+
+
+
+
