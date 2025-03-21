@@ -1,0 +1,26 @@
+{
+  "pipeline": [
+    {
+      "type": "readers.las",
+      "filename": "../plots_data/bretten01_leafon.laz"
+    },
+    {
+      "type": "filters.elm"
+    },
+    {
+      "type": "filters.outlier",
+      "method": "statistical",
+      "mean_k": 8,
+      "multiplier": 5.0
+    },
+    {
+      "type": "filters.splitter",
+      "length": "100"
+    },
+    {
+      "type": "writers.las",
+      "filename": "../tiles_data/tile_{#}.laz",
+      "forward": "all"
+    }
+  ]
+}

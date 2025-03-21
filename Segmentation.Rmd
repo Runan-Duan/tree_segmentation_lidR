@@ -1,0 +1,395 @@
+---
+title: "Individual_Tree_detection"
+output: html_document
+date: "2025-03-18"
+---
+
+```{r setup, include=FALSE}
+# Install required packages
+require(lidR)
+library(ggplot2)
+library(rgl)
+
+```
+
+```{r}
+threads = 8
+get_lidr_threads()
+set_lidr_threads(threads)
+get_lidr_threads()
+```
+
+## Import and preprocessing Point cloud
+
+```{r}
+las_first_echo <- readLAS("tiles_data/bretten01_leafon/las_output/476724.82099998_5429057.2870000005_1.laz")
+plot(las, color = "Z", bg = "white", axis = TRUE, legend = TRUE)
+```
+
+```{r}
+offsets <- plot(las)
+print(offsets)
+#[1]  476638.1 5429059.4
+```
+
+
+```{r}
+p1 <- c(476638.1, 5429059.4)
+p2 <- c(477000, 5429070)
+las_tr <- clip_transect(las, p1, p2, width = 5, xz = TRUE)
+ggplot(payload(las_tr), aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors(50))
+```
+
+## Ground Classification
+
+```{r}
+las_ground <- classify_ground(las, algorithm = pmf(ws = 5, th = 3))
+```
+
+```{r}
+
+# Check the unique classes in the classified LAS object
+unique(las_ground$Classification)
+
+```
+
+
+## Ground rasterization
+
+```{r}
+plot(las_ground, color = "Classification", size = 3, bg = "white") 
+```
+
+```{r}
+gnd <- filter_ground(las_ground)
+plot(gnd, size = 3, bg = "white", color = "Classification")
+```
+
+```{r}
+dtm <- rasterize_terrain(las_first_echo, 1, knnidw())
+```
+
+
+## Normalize Height
+
+nlas <- las - dtm makes very simple subtractions without any interpolation. normalize_height(las, knnidw()) computes on-the-fly the interpolation of the ground points and estimates the exact elevation of every points. An hybrid method consists in the interpolation of the pixel of an already computed DTM.
+
+```{r}
+nlas <- las_first_echo - dtm
+plot(nlas, size = 4, bg = "white")
+
+```
+
+
+```{r}
+nlas_hybird <- normalize_height(las_first_echo, tin(), dtm = dtm)
+```
+
+```{r}
+
+hist(filter_ground(nlas_hybird)$Z, breaks = seq(-60, 60, 0.1), main = "", xlab = "Elevation")
+
+#las <- unnormalize_height(nlas)
+```
+
+
+## Remove noise
+```{r}
+# Filter the tree points ( class 0)
+las_trees <- filter_poi(nlas_hybird, Classification == 0L)
+plot(las_trees, color = "Z", bg = "white", axis = TRUE, legend = TRUE)
+```
+
+
+```{r}
+# Filter tree points where return number is 1
+trees_first_echo <- filter_poi(las_trees, ReturnNumber == 1L)
+
+# Plot the filtered tree points with high density
+plot(trees_first_echo, color = "Z", bg = "white", axis = TRUE, legend = TRUE)
+
+```
+
+```{r}
+# Using IVF
+noise <- classify_noise(las_trees, sor(15,7))
+
+# Remove outliers using filter_poi()
+tree_denoise <- filter_poi(noise, Classification != LASNOISE)
+
+plot(tree_denoise, color = "Z", bg = "white", axis = TRUE, legend = TRUE)
+```
+
+
+### Rasterize Canopy
+
+
+#### Parameters testing
+```{r}
+chm_01 <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = p2r())
+col <- height.colors(25)
+plot(chm_01, col = col)
+
+chm_005 <- rasterize_canopy(tree_denoise, res = 0.05, algorithm = p2r())
+plot(chm_005, col = col)
+```
+One option to reduce the number of voids in the surface model is to replace every point in the point cloud with a disk of a known radius (e.g. 15 cm). This operation is meant to simulate the fact that the laser footprint is not a point, but rather a circular area. It is equivalent to computing the CHM from a densified point cloud in a way that tries to have a physical meaning.
+
+```{r}
+chm_01_cricle <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = p2r(subcircle = 0.05))
+plot(chm_01_cricle, col = col)
+
+chm_01_tin <- rasterize_canopy(tree_denoise, res = 0.1, p2r(0.05, na.fill = tin()))
+plot(chm_01_tin, col = col)
+
+chm_dsmtin <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = dsmtin())
+plot(chm_dsmtin, col = col)
+
+chm_005_cricle <- rasterize_canopy(tree_denoise, res = 0.05, algorithm = p2r(subcircle = 0.05))
+plot(chm_005_cricle, col = col)
+
+chm_005_tin <- rasterize_canopy(tree_denoise, res = 0.05, p2r(0.05, na.fill = tin()))
+plot(chm_005_tin, col = col)
+
+chm_005_dsmtin <- rasterize_canopy(tree_denoise, res = 0.05, algorithm = dsmtin())
+plot(chm_005_dsmtin, col = col)
+
+chm_01_cricle_01 <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = p2r(subcircle = 0.1))
+chm_005_cricle_01 <- rasterize_canopy(tree_denoise, res = 0.05, algorithm = p2r(subcircle = 0.1))
+plot(chm_01_cricle_01, col = col)
+plot(chm_005_cricle_01, col = col)
+
+```
+
+
+```{r}
+chm <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = dsmtin(max_edge = 0.4))
+plot(chm, col = col)
+```
+
+```{r}
+# The first layer is a regular triangulation
+layer0 <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = dsmtin())
+
+# Triangulation of first return above 5 m
+above10 <- filter_poi(tree_denoise, Z >= 5)
+layer10 <- rasterize_canopy(above10, res = 0.1, algorithm = dsmtin(max_edge = 0.4))
+
+# Triangulation of first return above 10 m
+above20 <- filter_poi(above10, Z >= 10)
+layer20 <- rasterize_canopy(above20, res = 0.1, algorithm = dsmtin(max_edge = 0.4))
+
+# The final surface is a stack of the partial rasters
+dsm <- layer0
+dsm[] <- pmax(as.numeric(layer0[]), as.numeric(layer10[]), as.numeric(layer20[]), na.rm = T)
+
+layers <- c(layer0, layer10, layer20, dsm)
+names(layers) <- c("Base", "Layer10m", "Layer20m", "pitfree")
+plot(layers, col = col)
+
+
+```
+
+```{r}
+chm_pitfre_01 <- rasterize_canopy(tree_denoise, res = 0.1, pitfree(thresholds = c(0, 10, 20), max_edge = c(0, 1)))
+plot(chm_pitfre_01, col = col)
+
+chm_pitfre_01_circle <- rasterize_canopy(tree_denoise, res = 0.1, pitfree(subcircle = 0.1))
+plot(chm_pitfre_01_circle, col = col)
+
+
+```
+
+
+##  Individual Tree Detection (ITD)
+
+```{r}
+
+fill.na <- function(x, i=5) { if (is.na(x)[i]) { return(mean(x, na.rm = TRUE)) } else { return(x[i]) }}
+w <- matrix(1, 3, 3)
+
+chm <- rasterize_canopy(tree_denoise, res = 0.1, algorithm = p2r(subcircle = 0.1), pkg = "terra")
+filled <- terra::focal(chm, w, fun = fill.na)
+smoothed <- terra::focal(chm, w, fun = mean, na.rm = TRUE)
+
+chms <- c(chm, filled, smoothed)
+names(chms) <- c("Base", "Filled", "Smoothed")
+plot(chms, col = col)
+```
+
+
+
+```{r}
+
+f <- function(x) {x * 0.1 + 3}
+heights <- seq(0,30,5)
+ws <- f(heights)
+plot(heights, ws, type = "l", ylim = c(0,6))
+
+```
+
+```{r}
+f <- function(x) {
+  y <- numeric(length(x))
+  y[x < 5] <- 1
+  y[x >= 5 & x <= 10] <- 2
+  y[x >= 10 & x <= 20] <- 3
+  y[x > 20] <- 4  
+  return(y)
+}
+
+heights <- seq(-5,40,0.5)
+ws <- f(heights)
+plot(heights, ws, type = "l",  ylim = c(0,5), main = "Local Maximum Filter with Variable Window Size")
+```
+
+```{r}
+# Local Maximum Filter with variable windows size
+ttops <- locate_trees(tree_denoise, lmf(f))
+
+# Plot the CHM with the tree tops overlaid
+plot(chm, col = height.colors(50), main = "Canopy Height Model with Tree Tops")
+plot(sf::st_geometry(ttops), add = TRUE, pch = 3, col = "black")  # Add tree tops to the plot
+
+```
+
+
+### Apply rasterization
+```{r}
+# Point-to-raster 2 resolutions
+chm_p2r_05 <- rasterize_canopy(tree_denoise, 0.5, p2r(subcircle = 0.2), pkg = "terra")
+chm_p2r_1 <- rasterize_canopy(tree_denoise, 1, p2r(subcircle = 0.2), pkg = "terra")
+
+# Pitfree with and without subcircle tweak
+chm_pitfree_05_1 <- rasterize_canopy(tree_denoise, 0.5, pitfree(), pkg = "terra")
+chm_pitfree_05_2 <- rasterize_canopy(tree_denoise, 0.5, pitfree(subcircle = 0.2), pkg = "terra")
+
+# Post-processing median filter
+kernel <- matrix(1,3,3)
+chm_p2r_05_smoothed <- terra::focal(chm_p2r_05, w = kernel, fun = median, na.rm = TRUE)
+chm_p2r_1_smoothed <- terra::focal(chm_p2r_1, w = kernel, fun = median, na.rm = TRUE)
+```
+
+
+### Tree top detection
+
+```{r}
+ttops_chm_p2r_05 <- locate_trees(chm_p2r_05, lmf(f))
+ttops_chm_p2r_1 <- locate_trees(chm_p2r_1, lmf(f))
+ttops_chm_pitfree_05_1 <- locate_trees(chm_pitfree_05_1, lmf(f))
+ttops_chm_pitfree_05_2 <- locate_trees(chm_pitfree_05_2, lmf(f))
+ttops_chm_p2r_05_smoothed <- locate_trees(chm_p2r_05_smoothed, lmf(f))
+ttops_chm_p2r_1_smoothed <- locate_trees(chm_p2r_1_smoothed, lmf(f))
+```
+
+
+```{r}
+par(mfrow=c(3,2))
+col <- height.colors(50)
+plot(chm_p2r_05, main = "CHM P2R 0.5", col = col); plot(sf::st_geometry(ttops_chm_p2r_05), add = T, pch =3)
+plot(chm_p2r_1, main = "CHM P2R 1", col = col); plot(sf::st_geometry(ttops_chm_p2r_1), add = T, pch = 3)
+plot(chm_p2r_05_smoothed, main = "CHM P2R 0.5 smoothed", col = col); plot(sf::st_geometry(ttops_chm_p2r_05_smoothed), add = T, pch =3)
+plot(chm_p2r_1_smoothed, main = "CHM P2R 1 smoothed", col = col); plot(sf::st_geometry(ttops_chm_p2r_1_smoothed), add = T, pch =3)
+plot(chm_pitfree_05_1, main = "CHM PITFREE 1", col = col); plot(sf::st_geometry(ttops_chm_pitfree_05_1), add = T, pch =3)
+plot(chm_pitfree_05_2, main = "CHM PITFREE 2", col = col); plot(sf::st_geometry(ttops_chm_pitfree_05_2), add = T, pch =3)
+
+```
+
+
+
+
+### CHM based Segmentation
+```{r}
+algo <- dalponte2016(chm_p2r_05_smoothed, ttops_chm_p2r_05_smoothed)
+tree_segs <- segment_trees(las, algo) # segment point cloud
+```
+
+
+
+```{r}
+plot(tree_segs, bg = "white", size = 4, color = "treeID") # visualize trees
+```
+
+```{r}
+
+tree20 <- filter_poi(tree_segs, treeID == 20)
+plot(tree20, size = 3, bg = "white")
+
+```
+
+
+```{r}
+# Point Cloud based segmentation -- slow
+algo2 <- li2012()
+tree_segs2 <- segment_trees(las, algo2, attribute = "IDli")
+plot(las, add = x + c(100,0), bg = "white", size = 4, color = "IDli", colorPalette = pastel.colors(200))
+```
+
+
+
+
+## Extract crown metrics
+
+
+```{r}
+crowns <- crown_metrics(tree_segs, func = .stdtreemetrics, geom = "convex")
+plot(crowns["convhull_area"], main = "Crown area (convex hull)")
+```
+
+```{r}
+metrics <- crown_metrics(tree_segs, ~list(z_max = max(Z), z_mean = mean(Z))) # calculate tree metrics
+head(metrics)
+
+```
+
+
+```{r}
+plot(metrics["z_max"], pal = hcl.colors, pch = 19) # plot using z_max
+
+
+```
+
+```{r}
+
+custom_crown_metrics <- function(z, i) { # user-defined function
+  metrics <- list(
+     z_max = max(z),   # max height
+     z_sd = sd(z),     # vertical variability of points
+     i_mean = mean(i), # mean intensity
+     i_max  = max(i)   # max intensity
+   )
+   return(metrics) # output
+}
+
+ccm = ~custom_crown_metrics(z = Z, i = Intensity)
+```
+
+
+```{r}
+metrics <- crown_metrics(tree_segs, func = ccm, geom = "convex")
+plot(metrics["z_max"], pal = hcl.colors)
+
+```
+
+```{r}
+metrics <- crown_metrics(tree_segs, func = ccm, geom = "concave")
+plot(metrics["z_max"], pal = hcl.colors)
+```
+
+
+```{r}
+
+metrics <- crown_metrics(tree_segs, ~list(imean = mean(Intensity))) # calculate tree intensity metrics
+
+# Step 2: Filter trees based on intensity (e.g., intensity > 80)
+high_intensity_trees <- metrics[metrics$imean > 80, ]
+
+# Assuming 'high_intensity_trees' contains the filtered trees with intensity > 80
+plot(high_intensity_trees, pdal = "imean", main = "High Intensity Trees")
+
+```
+

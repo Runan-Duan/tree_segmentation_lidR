@@ -1,0 +1,26 @@
+{
+  "pipeline": [
+    {
+      "type": "readers.las",
+      "filename": "{input_file}"
+    },
+    {
+      "type": "filters.elm"
+    },
+    {
+      "type": "filters.outlier",
+      "method": "statistical",
+      "mean_k": 8,
+      "multiplier": 5.0
+    },
+    {
+      "type": "filters.splitter",
+      "length": "{grid_size}"
+    },
+    {
+      "type": "writers.las",
+      "filename": "{output_path}/{XBOTTOM}_{YBOTTOM}_{ID}.laz",
+      "forward": "all"
+    }
+  ]
+}

@@ -1,0 +1,927 @@
+Error on 2025-03-19 21:38:43.650518 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:43.779017 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:43.919310 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.051794 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.168523 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.295060 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.417336 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.546382 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.672645 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.790763 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:44.911031 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:38:45.031337 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Leave out the file extension as the hybrid DTM model is stored in GeoTiff format (grid heights) and ESRI shapefile format (structure lines). The appropirate extensions are appended automatically by the program.
+
+Scope stack (innermost scope last):
+Run module opalsDTM.
+  Finalize input of module opalsDTM.
+Error on 2025-03-19 21:40:20.756436 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:40:22.863784 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:40:24.947352 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:40:26.989274 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:40:29.073316 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:40:31.168979 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:42:10.998480 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:42:13.060330 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:42:15.175493 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:43:04.340763 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:43:06.427819 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:43:08.546578 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:45:26.113244 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:45:28.233090 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:45:30.295334 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:45:32.376110 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:45:34.454863 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 21:46:01.601077 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:46:03.697320 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:46:05.815536 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with dtm_output\ as value.
+Error on 2025-03-19 21:49:46.996210 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.107220 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.233710 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.348198 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.454943 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.549798 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.660713 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.772592 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.893374 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:47.999972 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:48.103526 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 21:49:48.215016 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:50.711751 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:50.973257 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:51.208767 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:51.406753 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:51.592999 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:51.772868 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:51.959153 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:52.165848 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:52.396517 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:37:52.586477 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+Error on 2025-03-19 22:39:57.422989 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 22:39:59.688411 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 22:40:01.928643 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 22:42:13.181495 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 22:42:15.455428 in module opalsDTM, thread 0: Error executing opalsDTM compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\dtm_output\' is not accessible for writing: The system cannot find the path specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with .\dtm_output\ as value.
+Error on 2025-03-19 22:52:53.373602 in module opalsView, thread 0: Error executing opalsView compiled on May 25 2024 01:08:33:
+ERROR 1006: File '.\odm_output\476616.086_5429057.297_{1}.odm' is not accessible for reading: The system cannot find the file specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with .\odm_output\476616.086_5429057.297_{1}.odm as value.
+Error on 2025-03-19 23:27:20.696976 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:20.855481 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.007269 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.165820 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.361271 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.520152 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.672941 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.814882 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:21.964677 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:22.114775 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:22.249761 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:27:22.399781 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:20.284608 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:20.437307 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:20.595442 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:20.732532 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:20.877957 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.041883 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.192042 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.327113 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.479361 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.622237 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:28:21.758125 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:08.817752 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:08.963802 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.102169 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.222852 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.373745 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.511877 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.680055 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.821881 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:09.965753 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:29:10.107758 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 5000: User Interrupt occurred
+Scope stack (innermost scope last):
+Construct opalsExport.
+  Reset module opalsExport.
+Error on 2025-03-19 23:29:10.114115 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 0002: prepareForDestruction_() must be called in the body of the module's destructor
+Scope stack (innermost scope last):
+Destruct opalsExport.
+Error on 2025-03-19 23:30:16.467675 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:16.616173 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:16.759139 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:16.891759 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:17.026616 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:17.191206 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:17.333558 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:17.474792 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:30:17.631291 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:19.671568 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:19.865114 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.009886 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.152522 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.276742 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.420177 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.569193 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:49:20.712915 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:51.782444 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:51.925234 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.058810 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.206651 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.344251 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.502505 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.644812 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:51:52.779124 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 5000: User Interrupt occurred
+Scope stack (innermost scope last):
+Construct opalsExport.
+  Reset module opalsExport.
+Error on 2025-03-19 23:51:52.787163 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 0002: prepareForDestruction_() must be called in the body of the module's destructor
+Scope stack (innermost scope last):
+Destruct opalsExport.
+Error on 2025-03-19 23:53:26.011664 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.150693 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.291313 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.434633 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.603952 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.740433 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:26.879118 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:27.018082 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:27.166504 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:27.308462 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:53:27.450406 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:44.406530 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:44.549075 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:44.681253 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:44.822170 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:44.945470 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.089893 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.245077 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.388973 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.522754 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.658170 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:54:45.800283 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-19 23:56:51.320285 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File '476616.086_5429057.297_' is not accessible for reading: The system cannot find the file specified.
+Searched directories:
+.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with 476616.086_5429057.297_ as value.
+Error on 2025-03-19 23:58:03.985275 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File '476616.086_5429057.297_{10}.odm' is not accessible for reading: The system cannot find the file specified.
+Searched directories:
+.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with 476616.086_5429057.297_{10}.odm as value.
+Error on 2025-03-20 00:03:40.141700 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.281613 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.412096 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.544009 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.713301 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.829644 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:40.973455 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:41.110248 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:41.260527 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:41.401377 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:41.535930 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:03:41.665623 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.199312 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.356734 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.515482 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.665164 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.792292 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:56.942441 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:57.079619 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:57.224462 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:04:57.387141 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:05:23.465829 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File 'tile_' is not accessible for reading: The system cannot find the file specified.
+Searched directories:
+.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with tile_ as value.
+Error on 2025-03-20 00:05:50.278289 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File 'odm_output/tile_' is not accessible for reading: The system cannot find the file specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with odm_output/tile_ as value.
+Error on 2025-03-20 00:06:06.934279 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File './odm_output/tile_' is not accessible for reading: The system cannot find the file specified.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with ./odm_output/tile_ as value.
+Error on 2025-03-20 00:16:12.559291 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:12.715789 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:12.864754 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:13.008462 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:13.162186 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:13.309739 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:13.457037 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:16:13.602109 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.

@@ -1,0 +1,64 @@
+Error on 2025-03-20 00:08:28.267246 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1006: File 'tile_' is not accessible for reading: The system cannot find the file specified.
+Searched directories:
+.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+    Validate inFile with tile_ as value.
+Error on 2025-03-20 00:09:14.270405 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1004: Parameter 'outFile' has been queried without being set
+Scope stack (innermost scope last):
+Run module opalsExport.
+  Finalize input of module opalsExport.
+Error on 2025-03-20 00:19:36.132897 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:36.270654 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:36.410715 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:36.552252 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:36.710696 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:36.862273 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:37.009022 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:37.148261 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:19:37.291330 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1000: Value expected.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option inFile.
+Error on 2025-03-20 00:21:47.685956 in module opalsExport, thread 0: Error executing opalsExport compiled on May 25 2024 01:08:33:
+ERROR 1007: File 'D:\Master\LiDAR\Final_project\LidR\classification\odm_output\tile_*.laz' is not accessible for writing: The filename, directory name, or volume label syntax is incorrect.
+Scope stack (innermost scope last):
+Parse the commandline.
+  Apply values to option outFile.
+    Validate outFile with tile_*.laz as value.

@@ -1,0 +1,5 @@
+{
+  "input_file": "../plots_data/bretten01_leafon.laz",
+  "grid_size": 100,
+  "output_dir": "../tiles_data"
+}
