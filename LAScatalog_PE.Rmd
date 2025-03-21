@@ -4,9 +4,8 @@ output: html_document
 date: "2025-03-18"
 ---
 
-
+## Setup
 ```{r setup, include=FALSE}
-# Install required packages
 # Clear environment
 #rm(list = ls(globalenv()))
 
@@ -16,17 +15,18 @@ library(mapview)
 library(sf)
 library(future)
 library(stringr)
-
 ```
 
-
 ```{r}
+# Set up threads
 threads = 8
 get_lidr_threads()
 set_lidr_threads(threads)
-
 ```
+
+
 ## LAScatalog processing engine
+### Create LAScatalog object
 ```{r}
 ctg <- readLAScatalog("tiles_data/bretten01_leafon/las_output")
 # For LAScatalog object
@@ -41,9 +41,9 @@ summary(ctg)
 plot(ctg, map= TRUE)
 ```
 
-
+### Region of interset
 ```{r}
-# Specify the filename(s) to remove (e.g., file 3)
+# Specify the filenames to remove
 file_to_remove <- c("tiles_data/bretten01_leafon/las_output/476616.0870000124_5428970.0309999995_8.laz",
                     "tiles_data/bretten01_leafon/las_output/476616.08599996567_5429057.297000885_10.laz", 
                     "tiles_data/bretten01_leafon/las_output/476624.8219999969_5429157.286998749_11.laz", 
@@ -51,14 +51,11 @@ file_to_remove <- c("tiles_data/bretten01_leafon/las_output/476616.0870000124_54
 
 # Filter the catalog to exclude the specified file
 ctg_filtered <- ctg[!ctg@data$filename %in% file_to_remove, ]
-
 ```
-
 
 ```{r}
 plot(ctg_filtered, map = TRUE)
 ```
-
 
 ```{r}
 # check if files have .lax
@@ -68,10 +65,10 @@ is.indexed(ctg_filtered)
 lidR:::catalog_laxindex(ctg_filtered)
 ```
 
+
 ## Parallel processing
-
+### Specify chunk size and buffer
 ```{r}
-
 opt_chunk_size(ctg_filtered) <- 40
 opt_chunk_buffer(ctg_filtered) <- 5
 
@@ -79,14 +76,13 @@ opt_chunk_buffer(ctg_filtered) <- 5
 plot(ctg_filtered, chunk = TRUE)
 ```
 
-
 ```{r}
 #las_check(ctg_filtered, deep = TRUE)
 summary(ctg_filtered)
 ```
 
-## Ground Classification
 
+## (Optional) Ground Classification 
 ```{r eval=FALSE, include=FALSE}
 # Set the output directory
 output_dir <- "tiles_data/bretten01_leafon/classified"
@@ -99,53 +95,38 @@ opt_output_files(ctg_filtered) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_
 classified_ctg <- classify_ground(ctg_filtered, pmf(ws = 5, th = 3))
 ```
 
-## DTM
 
+## DTM 
 ```{r}
-# Set the output directory
+# Set the output directory and Generate output filenames using a template
 output_dir <- "tiles_data/bretten01_leafon/dtm"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-
-# Dynamically generate output filenames using a template
 opt_output_files(ctg_filtered) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_dtm")
 
 dtm <- rasterize_terrain(ctg_filtered, 1, knnidw())
 ```
 
-```{r}
-dtm
-plot(dtm, main = "Digital Terrain Model (DTM)", xlab = "Easting", ylab = "Northing", legend = TRUE)
-```
-
 ## Height normalization
-
 ```{r}
-# Set the output directory
 output_dir <- "tiles_data/bretten01_leafon/norm"
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-
-# Dynamically generate output filenames using a template
 opt_output_files(ctg_filtered) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_norm")
 
 ctg_norm <- normalize_height(ctg_filtered, dtm)
 ```
+
+
+## Import files from LAScatalog
 ```{r}
 norm_input_dir <- "tiles_data/bretten01_leafon/norm"
 ctg_norm <- readLAScatalog(norm_input_dir)
 plot(ctg_norm, chunk=TRUE, map=TRUE)
 ```
 
-## Remove noise
+
+## Local Maximum Filter 
 ```{r}
-# Filter tree points where return number is 1
-#opt_filter(ctg_norm) <- "-keep_first"
-hmean <- pixel_metrics(ctg_norm, ~mean(Z), 1)
-
-plot(hmean, col = height.colors(25))
-```
-
-
-```{r}
+# Variable window definition
 f <- function(x) {
   y <- numeric(length(x))
   y[x < 5] <- 1
@@ -155,13 +136,13 @@ f <- function(x) {
   return(y)
 }
 
-heights <- seq(-5,40,0.5)
+heights <- seq(-5,100,0.5)
 ws <- f(heights)
 plot(heights, ws, type = "l",  ylim = c(0,5), main = "Local Maximum Filter with Variable Window Size")
-
 ```
 
-## Individual Tree Detection
+
+## Resolutions/algorithoms Exploration for tree tops detection
 ```{r}
 # Point-to-raster 2 resolutions
 chm_p2r_05 <- rasterize_canopy(ctg_norm, 0.5, p2r(subcircle = 0.2), pkg = "terra")
@@ -190,6 +171,50 @@ ttops_chm_p2r_05_smoothed <- locate_trees(chm_p2r_05_smoothed, lmf(f))
 ttops_chm_p2r_1_smoothed <- locate_trees(chm_p2r_1_smoothed, lmf(f))
 ```
 
+
+### CHM based Segmentation
+```{r}
+output_dir <- "tiles_data/bretten01_leafon/segmented"
+dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+opt_output_files(ctg_norm) <- file.path(output_dir, "{XLEFT}_{YBOTTOM}_{ID}_seg")
+
+algo <- dalponte2016(chm_p2r_05_smoothed, ttops_chm_p2r_05_smoothed)
+tree_segs <- segment_trees(ctg_norm, algo) # segment point cloud
+```
+
+
+## Individual Tree Segmentation
+```{r}
+opt_output_files(ctg_norm) <- paste0(tempdir(), "/chm_{*}")
+chm <- rasterize_canopy(ctg_norm, 1, p2r(0.15))
+plot(chm, col = height.colors(50))
+```
+
+```{r}
+opt_output_files(ctg_norm) <- ""
+ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
+```
+
+
+
+
+## Plotting
+```{r}
+dtm
+plot(dtm, main = "Digital Terrain Model (DTM)", xlab = "Easting", ylab = "Northing", legend = TRUE)
+```
+
+
+```{r eval=FALSE, include=FALSE}
+# Filter tree points where return number is 1 (if necessary)
+#opt_filter(ctg_norm) <- "-keep_first"
+
+hmean <- pixel_metrics(ctg_norm, ~mean(Z), 1)
+
+plot(hmean, col = height.colors(25))
+```
+
+
 ```{r}
 col <- height.colors(50)
 plot(chm_p2r_05, main = "CHM P2R 0.5", col = col); plot(sf::st_geometry(ttops_chm_p2r_05), add = T, pch =3)
@@ -199,51 +224,6 @@ plot(chm_p2r_1_smoothed, main = "CHM P2R 1 smoothed", col = col); plot(sf::st_ge
 plot(chm_pitfree_05_1, main = "CHM PITFREE 1", col = col); plot(sf::st_geometry(ttops_chm_pitfree_05_1), add = T, pch =3)
 plot(chm_pitfree_05_2, main = "CHM PITFREE 2", col = col); plot(sf::st_geometry(ttops_chm_pitfree_05_2), add = T, pch =3)
 
-```
-
-### CHM based Segmentation
-```{r}
-algo <- dalponte2016(chm_p2r_05_smoothed, ttops_chm_p2r_05_smoothed)
-tree_segs <- segment_trees(ctg, algo) # segment point cloud
-```
-
-```{r}
-sum(ttops$treeID == 1)
-#> [1] 9
-plot(ttops["treeID"], cex = 0.3, pch = 19, nbreaks = 50)
-```
-
-```{r}
-ttops$treeID <- 1:nrow(ttops)
-ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
-plot(ttops["treeID"], cex = 0.01, pch = 19)
-```
-
-```{r}
-opt_output_files(ctg_norm) <- paste0(tempdir(), "/{*}")
-locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
-```
-
-## Individual Tree Segmentation
-
-```{r}
-opt_output_files(ctg_norm) <- paste0(tempdir(), "/chm_{*}")
-chm <- rasterize_canopy(ctg_norm, 1, p2r(0.15))
-plot(chm, col = height.colors(50))
-
-```
-
-```{r}
-opt_output_files(ctg_norm) <- ""
-ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
-
-```
-
-```{r}
-
-opt_output_files(ctg_norm) <- paste0(tempdir(), "/{*}_segmented")
-algo <- dalponte2016(chm, ttops)
-ctg_segmented <- segment_trees(ctg_norm, algo)
 ```
 
 
@@ -257,3 +237,12 @@ plot(ctg, add = T)
 ```
 
 
+```{r}
+sum(ttops$treeID == 1)
+#> [1] 9
+plot(ttops["treeID"], cex = 0.3, pch = 19, nbreaks = 50)
+
+ttops$treeID <- 1:nrow(ttops)
+ttops <- locate_trees(ctg_norm, lmf(4), uniqueness = "bitmerge")
+plot(ttops["treeID"], cex = 0.01, pch = 19)
+```
